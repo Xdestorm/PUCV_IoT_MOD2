@@ -30,6 +30,6 @@ def ingreso_total_por_ventas(itemes, productos):
 
 
 #programa
-dato =''
+dato ='4565'
 producto_con_mas_ingresos(dato, dato)
 ingreso_total_por_ventas(dato, dato)

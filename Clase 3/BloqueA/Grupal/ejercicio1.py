@@ -4,3 +4,5 @@ def par_no (n):
        print('false')
     else:
         print('true')
+
+par_no (3)

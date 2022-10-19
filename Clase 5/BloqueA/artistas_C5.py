@@ -17,28 +17,50 @@ artistas_por_dia = {
     "Jueves": (2, 5),
 }
 
-#funciones
-def cantidad_de_artistas(dia):
-    for key in artistas_por_dia:
-        if key == dia:
-            valor = len(artistas_por_dia[dia])
-        else:
-            return(0)
-        return(valor)
 
+
+def cantidad_de_artistas(dia):
+    if dia not in artistas_por_dia.keys():
+        print("0")
+    else:
+        print(len(artistas_por_dia[dia]))
 
 def nombre_primer_artista(dia):
-    codigo = artistas_por_dia[dia][0]
-    for n  in artistas:
-        if n == artistas[nombre][0]:
-            nombre = artistas[nombre]
-            return(nombre)
+    lala = artistas_por_dia[dia][0]
+    for llave in artistas:
+        a,b,c = artistas[llave]
+        if a == lala:
+            print(llave)
 
+def pais_origen_ultimo(dia):
+    lala = artistas_por_dia[dia][-1]
+    for llave in artistas:
+        a,b,c = artistas[llave]
+        if a == lala:
+            print(b)
+
+
+def tiempo_total(dia):
+    lala = 0
+    for z in artistas_por_dia["Lunes"]:
+        for llave in artistas:
+            a,b,c = artistas[llave]
+            if z == a:
+                lala+=c
+    print(lala)
 
 
 
 dia = input('Ingrese dia: ')
-#print('Ese dia se presentaran', cantidad_de_artistas(dia), 'artistas')
+print('Ese dia se presentaran', cantidad_de_artistas(dia), 'artistas')
 print('El primer artista del dia sera', nombre_primer_artista(dia))
-#print('El ultimo artista del dia viene de', pais_origen_ultimo(dia))
-#print('Ese dia el concierto completo durara', tiempo_total(dia),'minutos')
+print('El ultimo artista del dia viene de', pais_origen_ultimo(dia))
+print('Ese dia el concierto completo durara', tiempo_total(dia),'minutos')
+
+
+
+
+
+
+
+

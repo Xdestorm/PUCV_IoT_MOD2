@@ -10,3 +10,7 @@ def son_ortogonales(a, b):
         print('Son Ortorgonales')
     else:
         print('No son Ortogonales')
+
+producto_interno(5, 7)
+
+son_ortogonales(6, 7)
